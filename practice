@@ -1,0 +1,34 @@
+var battle= true;
+var youHit=prompt("Where do you want to hit?");
+var hitsThisRound= Math.floor(Math.random() * 2);
+var totalDamage= 0;
+
+while(battle){
+	if(youHit===     ){
+		console.log("Success! You hit a ship!");
+		totalDamage += hitsThisRound;
+
+		if(totalDamage>=10){
+			console.log("Mission Complete. You defeated the Computer");
+			battle=false;
+		}
+		else{
+			youHit=prompt("Where do you want to hit?");
+		}
+	}
+	else{
+        console.log("Mission Failed. The Computer defeated you");
+    }
+
+}
+
+var grid=[];
+for(var i=0; i<size; i++){
+	var row=[];
+	for(var j=0; j<size; j++){
+		row.push("column" + j);
+	}
+	grid.push(row);
+}
+
+console.log(grid)
